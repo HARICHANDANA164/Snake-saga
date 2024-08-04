@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @keyframes loading {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 180px;
+      }
+    }
+
+    body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("C:\\Users\\haric\\OneDrive\\Pictures\\snake1.png");
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+}
+
+.snake-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.snake-title {
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-shadow: 0 0 20px rgba(0, 255, 0, 0.7); /* Adjust the color and size of the glow */
+  padding: 20px;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 40px;
+  color: white; /* Adjust text color */
+  background: linear-gradient(to bottom, rgba(61, 9, 9, 0.889), rgba(102, 31, 13, 0.829));
+  padding: 20px; /* Adjust padding as needed */
+  border-radius: 10px;
+}
+
+.loading-line {
+  width: 150px;
+  height: 2px;
+  background-color: green;
+  border: 1px solid green;
+  border-radius: 10px;
+  margin-top: 10px; /* Adjust margin as needed */
+  animation: loading 2s ease-in-out forwards;
+}
+
+  </style>
+  <meta http-equiv="refresh" content="2;url=snake2.html">
+</head>
+<body>
+  <div class="container-fluid">
+  <div class="snake-image"><div class="sticker">
+    <img src="C:\Users\haric\Downloads\transparent_2024-03-10T19-46-04.png" width="220px" height="220px" style="align-items: start;"></div>
+    <div style="font-size: 20px;font-family: 'Times New Roman', Times, serif;color: rgb(32, 4, 4);font-weight: bolder;text-shadow: 20px;padding: 20px;">
+        SnakeSaga
+    </div>
+    </div>
+  <div class="loading">
+    Loading...
+    <div class="loading-line"></div>
+  </div>
+</div>
+</body>
+</html>

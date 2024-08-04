@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Game Over</title>
+    <style>
+        /* CSS Styles */
+        html, body {
+            margin: 0%;
+            padding: 0%;
+            height: 100%;
+            width: 100%;
+            background: radial-gradient(circle at center, rgb(58, 7, 7), rgb(99, 16, 16)) no-repeat;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+        }
+        
+        .container {
+            text-align: center;
+        }
+        
+        .score {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        
+        .highest-scoresh {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .button {
+            padding: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #090d0fb5; /* Button background color */
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            margin: 20px;
+        }
+        
+        .button:hover {
+            background-color: #105f0f; /* Button hover color */
+        }
+        .title {
+            text-align: center;
+            flex-grow: 1;
+            padding: 10px;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+        }
+
+        .title img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <div class="title">
+        <img src="snakesaga-icon.png" width="100" height="100" alt="Game Icon">
+        <div style="text-align: center;">
+            SnakeSaga-Hard<br><br>Space-Theme
+        </div>
+    </div>
+        <div class="score" id="finalScoresh">Your score: 0</div>
+        <div class="highest-scoresh" id="highestScoresh">Highest score: 0</div>
+        <button class="button" id="replayButton">Replay</button>
+        <button class="button" id="homeButton">Home</button>
+    </div>
+
+    <script>
+        // Retrieve the scores from URL parameters
+        const params = new URLSearchParams(window.location.search);
+        const finalScoresh = params.get('score');
+        const highestScoresh = params.get('highest_scoresh');
+
+        // Update the scores on the page
+        document.getElementById('finalScoresh').innerText = `Your score: ${finalScoresh}`;
+        document.getElementById('highestScoresh').innerText = `Highest score: ${highestScoresh}`;
+
+        // Add event listener to the replay button
+        document.getElementById('replayButton').addEventListener('click', () => {
+            // Redirect to the main game page
+            window.location.href = 'snakesaga-hard-space theme.html';
+        });
+
+        // Add event listener to the home button
+        document.getElementById('homeButton').addEventListener('click', () => {
+            // Redirect to the home page
+            window.location.href = 'snake2.html';
+        });
+    </script>
+</body>
+
+</html>

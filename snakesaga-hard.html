@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: radial-gradient(circle at center, rgb(58, 7, 7), rgb(99, 16, 16)) no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .container-fluid {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            margin: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: aliceblue;
+            text-align: center;
+        }
+
+        button {
+            color: aliceblue;
+            width: 400px;
+            text-align: center;
+            font-size: 50px;
+            gap: 20px;
+            background-color: green;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .button-class {
+            padding: 20px;
+        }
+
+        button:hover a {
+            color: black;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .back-button {
+            font-size: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            transition: border-color 0.3s ease;
+            position: absolute;
+            padding-left: 10px;
+            padding-right: 10px;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(0, 0, 0, 0.54);
+        }
+
+        .back-button:hover {
+            border-color: black;
+        }
+
+        .back-button:hover::after {
+            content: "Back";
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .h1{
+            font-size: 50px;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="snake2.html" class="back-button">&#9664;</a>
+    <div>
+        <img src="C:\Users\haric\Downloads\transparent_2024-03-10T19-46-04.png" width="220px" height="220px"
+             style="align-items: start;">
+    </div>
+    <div style="font-size: 20px;font-family: 'Times New Roman', Times, serif;color: aliceblue;">
+        SnakeSaga-Hard
+    </div>
+    <div class="h1">Choose Theme</div>
+
+</div>
+<div class="container-fluid">
+    <div class="button-class">
+        <button type="button" class="btn btn-block p-3"><a href="snakesaga-hard-forest theme.html">Forest </a></button>
+    </div>
+    <div class="button-class">
+        <button type="button" class="btn btn-block p-3"><a href="snakesaga-hard-space theme.html">Space </a></button>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="button-class">
+        <button type="button" class="btn btn-block p-3"><a href="snakesaga-hard-retro theme.html">Retro Arcade </a></button>
+    </div>
+    <div class="button-class">
+        <button type="button" class="btn btn-block p-3"><a href="snakesaga-hard-underwater theme.html">Under Water </a></button>
+    </div>
+</div>
+</body>
+</html>
